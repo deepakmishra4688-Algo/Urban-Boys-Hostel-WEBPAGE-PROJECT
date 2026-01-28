@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Urban Boys Hostel Groups Bhopal – Premium luxury hostels since 2015. Discipline meets comfort with single/double/triple rooms, high-speed Wi-Fi, mess, 24/7 security & more. Branches in Ayodhya Bypass, Indrapuri & MP Nagar. Book now!">
+    <title> URBAN BOYS HOSTEL | Official Groups Bhopal</title>
+    <title>Urban Boys Hostel Groups Bhopal | Premium Luxury Boys Hostels – Ayodhya Bypass, Indrapuri, MP Nagar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        
+        :root { --orange-main: #f97316; --bg-dark: #050505; }
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg-dark); 
+            color: white; 
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .font-sync { font-family: 'Syncopate', sans-serif; }
+
+        /* ANTI-FONT CUTTING SYSTEM */
+        h1, h2, h3, .sync-title { 
+            line-height: 1.5 !important; 
+            padding-bottom: 0.3em; 
+            display: block;
+            overflow: visible !important;
+        }
+
+        /* LOGO STYLING */
+        .logo-container {
+            height: 65px;
+            width: auto;
+            transition: 0.3s;
+            border-radius: 100%;
+        }
+        .logo-container img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+            border-radius: 100%;
+            
+            /* Glow effect for logo */
+            filter: drop-shadow(0 0 10px rgba(249, 115, 22, 0.4));
+        }
+
+        /* HERO SECTION 
+        .hero-premium {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), 
+                        url('https://images.unsplash.com/photo-1555854817-5b2260d50cbf?q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }*/
+        /* Updated hero styles – remove old background properties */
+.hero-premium {  /* optional class if you want to keep it for reference */
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Ensure video fills the hero perfectly */
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* Keeps aspect ratio, covers whole area */
+    object-position: center;
+}
+
+/* Optional: subtle zoom animation for premium cinematic feel */
+video {
+    animation: gentleZoom 25s infinite alternate ease-in-out;
+}
+
+@keyframes gentleZoom {
+    0%   { transform: scale(1.05); }
+    100% { transform: scale(1.12); }
+}
+
+        .glass-card { 
+            background: rgba(255, 255, 255, 0.02); 
+            backdrop-filter: blur(25px); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover { 
+            border-color: var(--orange-main); 
+            background: rgba(249, 115, 22, 0.03); 
+            transform: translateY(-10px);
+        }
+
+        .orange-glow { text-shadow: 0 0 40px rgba(249, 115, 22, 0.6); }
+
+        .cta-button { 
+            background: var(--orange-main); 
+            transition: 0.5s;
+            color: white; font-weight: 800; 
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
+        }
+        .cta-button:hover { 
+            background: white; 
+            color: var(--orange-main); 
+            transform: scale(1.05); 
+        }
+
+        .video-wrapper {
+            position: relative; padding-bottom: 56.25%; height: 0;
+            border-radius: 50px; overflow: hidden;
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #111; }
+        ::-webkit-scrollbar-thumb { background: var(--orange-main); border-radius: 5px; }
+        @media (max-width: 768px) {
+    video {
+        display: none;
+    }
+    #hero {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), 
+                    url('https://images.unsplash.com/photo-1555854817-5b2260d50cbf?q=80&w=2000') center/cover fixed;
+    }
+}
+/* Mobile menu animations */
+#mobile-menu {
+    transform: translateX(100%);
+}
+
+#mobile-menu.open {
+    transform: translateX(0);
+}
+
+.mobile-link {
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+#mobile-menu.open .mobile-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger animation delay for each link */
+.mobile-link:nth-child(1) { transition-delay: 0.1s; }
+.mobile-link:nth-child(2) { transition-delay: 0.2s; }
+.mobile-link:nth-child(3) { transition-delay: 0.3s; }
+.mobile-link:nth-child(4) { transition-delay: 0.4s; }
+.mobile-link:nth-child(5) { transition-delay: 0.5s; }
+.mobile-link:nth-child(6) { transition-delay: 0.6s; }
+
+/* Hamburger to X animation (optional extra polish) */
+#mobile-menu-btn.active i::before {
+    content: "\f00d"; /* fa-times */
+}
+        
+    </style>
+</head>
+<body>
+   <nav class="fixed top-0 left-0 w-full z-[100] bg-black/90 backdrop-blur-xl px-6 py-4 flex justify-between items-center border-b border-white/5 transition-all duration-500"
+     data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-out">
+
+    <!-- Logo + Title -->
+    <div class="flex items-center gap-5">
+        <div class="logo-container">
+            <img src="Urban-Hostel-Main-Logo-800x600-1.jpg" alt="Urban Hostels Group Logo">
+        </div>
+        <div class="leading-none border-l border-white/20 pl-5">
+            <div class="text-xl sm:text-2xl font-black font-sync text-white tracking-tighter uppercase">
+                THE URBAN BOYS<span class="text-orange-400"> HOSTEL GROUPS</span>
+            </div>
+            <span class="text-[9px] sm:text-[10px] text-slate-400 font-bold tracking-[0.4em] uppercase">The Luxury Hostels</span>
+        </div>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden lg:flex space-x-10 text-sm font-bold uppercase tracking-widest text-slate-300">
+        <a href="#hero" class="nav-link hover:text-orange-500 transition-colors">Home</a>
+        <a href="#branches" class="nav-link hover:text-orange-500 transition-colors">Network</a>
+        <a href="#rooms" class="nav-link hover:text-orange-500 transition-colors">Rooms</a>
+        <a href="#owner" class="nav-link hover:text-orange-500 transition-colors">Director's Desk</a>
+        <a href="#mess" class="nav-link hover:text-orange-500 transition-colors">Mess Menu</a>
+    </div>
+
+    <!-- Desktop CTA -->
+    <a href="https://wa.me/919826807264" class="hidden lg:block cta-button px-8 py-3 rounded-xl text-xs uppercase tracking-tighter shadow-lg">Book Seat</a>
+
+    <!-- Mobile Hamburger Button -->
+    <button id="mobile-menu-btn" class="lg:hidden text-white text-3xl focus:outline-none z-50 transition-transform duration-300">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Mobile Menu Overlay + Content -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/90 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-500 ease-in-out lg:hidden">
+        <div class="flex flex-col h-full p-8">
+            <!-- Close Button -->
+            <button id="close-menu" class="self-end text-white text-4xl mb-12 focus:outline-none">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Mobile Links -->
+            <div class="flex flex-col items-center gap-10 text-2xl font-bold uppercase tracking-widest text-slate-200">
+                <a href="#hero" class="mobile-link opacity-0 translate-y-4 transition-all duration-700">Home</a>
+                <a href="#branches" class="mobile-link opacity-0 translate-y-4 transition-all duration-700">Network</a>
+                <a href="#rooms" class="mobile-link opacity-0 translate-y-4 transition-all duration-700">Rooms</a>
+                <a href="#owner" class="mobile-link opacity-0 translate-y-4 transition-all duration-700">Director's Desk</a>
+                <a href="#mess" class="mobile-link opacity-0 translate-y-4 transition-all duration-700">Mess Menu</a>
+                <a href="https://wa.me/919826807264" class="mobile-link cta-button px-10 py-5 rounded-xl text-lg mt-8 opacity-0 translate-y-4 transition-all duration-700">Book Seat</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+  <header id="hero" class="relative min-h-screen flex items-center overflow-hidden bg-black">
+
+    <!-- Video Background -->
+    <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        class="absolute inset-0 w-full h-full object-cover"
+        poster="https://images.unsplash.com/photo-1555854817-5b2260d50cbf?q=80&w=2000"  <!-- fallback image when video fails to load -->
+    >
+        <source src="mixkit-students-walking-in-a-university-4519-hd-ready.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Dark overlay to ensure text remains readable -->
+    <div class="absolute inset-0 bg-black/65 z-10"></div>
+
+    <!-- Your original hero content – now layered on top -->
+    <div class="container mx-auto px-6 lg:px-24 relative z-20">
+        <div class="max-w-5xl">
+            <h4 class="text-orange-500 font-bold tracking-[0.6em] text-sm uppercase mb-8" data-aos="fade-down">Premium Living Since 2015</h4>
+            <h1 class="text-5xl lg:text-[30px] font-black font-sync orange-glow mb-10 uppercase italic leading-tight" data-aos="fade-right">
+                "More than a hostel- a Premium Home for focused <br><span class="text-white">And ambitious Minds."</span>
+            </h1>
+            <p class="text-slate-200 text-xl lg:text-2xl max-w-2xl font-light leading-relaxed mb-12 border-l-4 border-orange-500 pl-8" data-aos="fade-up" data-aos-delay="500">
+                India's most organized hostel chain. We provide an environment where discipline meets luxury.
+            </p>
+            <div class="flex flex-wrap gap-8" data-aos="fade-up" data-aos-delay="600">
+                <a href="#branches" class="cta-button px-14 py-6 rounded-2xl text-sm tracking-widest uppercase">View Branches</a>
+                <a href="#tour" class="bg-white/5 border border-white/10 backdrop-blur-md px-14 py-6 rounded-2xl font-black text-sm tracking-widest hover:bg-white hover:text-black transition uppercase">Watch Tour</a>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+    <section id="branches" class="py-32 bg-zinc-950 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl lg:text-7xl font-black font-sync text-center mb-24 uppercase italic" data-aos="fade-up">OUR <span class="text-orange-500">NETWORK</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="branch-card group glass-card p-6 rounded-[50px]" data-aos="fade-up">
+                    <div class="overflow-hidden rounded-[40px] h-72 mb-8">
+                        <img src="OIP.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <h3 class="text-3xl font-black uppercase mb-2 px-2">Ayodhya Bypass</h3>
+                    <p class="text-orange-500 font-bold mb-4 uppercase text-xs px-2">Near Tanatan Dhaba </p>
+                    <p class="text-slate-400 text-sm mb-8 px-2">Ultra-luxury facility with high-end furniture and 24/7 warden support & Walking distance from top colleges and SIRT/LNCT bus stops.</p>
+                    <a href="https://wa.me/919826807264" class="block text-center py-5 bg-white/5 rounded-3xl text-xs font-black uppercase hover:bg-orange-500 transition">Check Availability</a>
+                </div>
+                <div class="branch-card group glass-card p-6 rounded-[50px] border-orange-500/40" data-aos="fade-up" data-aos-delay="200">
+                    <div class="overflow-hidden rounded-[40px] h-72 mb-8">
+                        <img src="OIP.webp" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <h3 class="text-3xl font-black uppercase mb-2 px-2">Indrapuri</h3>
+                    <p class="text-orange-500 font-bold mb-4 uppercase text-xs px-2">Sector C, BHEL Gate</p>
+                    <p class="text-slate-400 text-sm mb-8 px-2">Walking distance from top colleges and SIRT/LNCT bus stops.</p>
+                    <a href="https://wa.me/919826807264" class="block text-center py-5 cta-button rounded-3xl text-xs font-black uppercase">Most Popular</a>
+                </div>
+                <div class="branch-card group glass-card p-6 rounded-[50px]" data-aos="fade-up" data-aos-delay="400">
+                    <div class="overflow-hidden rounded-[40px] h-72 mb-8">
+                        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <h3 class="text-3xl font-black uppercase mb-2 px-2">MP Nagar</h3>
+                    <p class="text-orange-500 font-bold mb-4 uppercase text-xs px-2">Zone 1, Coaching Area</p>
+                    <p class="text-slate-400 text-sm mb-8 px-2">Ideally located for UPSC and competitive exam aspirants.</p>
+                    <a href="https://wa.me/919826807264" class="block text-center py-5 bg-white/5 rounded-3xl text-xs font-black uppercase hover:bg-orange-500 transition">Check Availability</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="owner" class="py-32 px-6 bg-black">
+        <div class="container mx-auto">
+            <div class="glass-card rounded-[80px] p-10 lg:p-24 flex flex-col lg:flex-row gap-20 items-center">
+                <div class="lg:w-1/3 relative" data-aos="fade-right">
+                    <div class="absolute -inset-4 bg-orange-500 blur-2xl opacity-20"></div>
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800" class="rounded-[50px] relative z-10 grayscale hover:grayscale-0 transition duration-700">
+                    <div class="absolute -bottom-6 -right-6 bg-orange-600 p-8 rounded-[30px] z-20 shadow-2xl">
+                        <i class="fas fa-quote-left text-4xl"></i>
+                    </div>
+                </div>
+                <div class="lg:w-2/3" data-aos="fade-left">
+                    <h4 class="text-orange-500 font-bold uppercase tracking-[0.4em] text-sm mb-6">Director's Desk</h4>
+                    <h2 class="text-4xl lg:text-6xl font-black font-sync mb-8 italic uppercase">Vision Behind <span class="text-orange-500">The Urban Boys Hostels </span></h2>
+                    <p class="text-slate-300 text-xl leading-relaxed italic mb-10">
+                        "At The Urban Boys Hostel, we don't just provide a room; we provide a foundation. My vision was to create a place where students from across India feel the safety of home and the discipline required to succeed in life. We treat every student as a member of our family."
+                    </p>
+                    <div class="border-t border-white/10 pt-8">
+                        <h5 class="text-2xl font-bold uppercase"> DEEPAK MISHRA</h5>
+                        <p class="text-orange-500 font-bold text-xs tracking-widest uppercase mt-2">Managing Director, The Urban Boys Hostels Group</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rooms" class="py-32 px-6 bg-zinc-950">
+        <div class="container mx-auto">
+            <h2 class="text-center text-4xl lg:text-7xl font-black font-sync mb-24 uppercase italic">ROOM <span class="text-orange-500">PLANS</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="glass-card p-12 rounded-[60px] text-center" data-aos="zoom-in">
+                    <div class="text-6xl text-orange-500 mb-8"><i class="fas fa-user"></i></div>
+                    <h4 class="text-3xl font-black uppercase mb-6">Single Seater</h4>
+                    <p class="text-slate-400 mb-10">Total focus. Dedicated workspace and personal storage for uninterrupted study sessions.</p>
+                    <p class="text-yellow-500 font-black tracking-widest">$1000</p>
+                    <p class="text-orange-500 font-black tracking-widest">₹ PREMIUM STAY</p>
+                </div>
+                <div class="glass-card p-12 rounded-[60px] text-center border-orange-500" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-6xl text-orange-500 mb-8"><i class="fas fa-user-friends"></i></div>
+                    <h4 class="text-3xl font-black uppercase mb-6">Double Seater</h4>
+                    <p class="text-slate-400 mb-10">The perfect balance. Shared energy with individual study tables and spacious storage.</p>
+                    <p class="text-yellow-500 font-black tracking-widest">$600</p>
+                    <p class="text-orange-500 font-black tracking-widest">₹ BEST VALUE</p>
+                </div>
+                <div class="glass-card p-12 rounded-[60px] text-center" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="text-6xl text-orange-500 mb-8"><i class="fas fa-users"></i></div>
+                    <h4 class="text-3xl font-black uppercase mb-6">Triple Seater</h4>
+                    
+                <p class="text-slate-400 mb-10">Social and affordable. Designed for friends who want to live and study together.</p>
+                    <p class="text-yellow-500 font-black tracking-widest">$400</p>
+                <p class="text-orange-500 font-black tracking-widest">₹ BUDGET FRIENDLY</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tour" class="py-32 px-6 bg-black">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-6xl font-black font-sync uppercase italic">CINEMATIC <span class="text-orange-500">TOUR</span></h2>
+                <p class="text-slate-500 mt-4 uppercase tracking-[0.3em] font-bold">Experience the luxury from your screen</p>
+            </div>
+            <div class="video-wrapper glass-card p-3 shadow-2xl" data-aos="zoom-in">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Hostel Tour" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="amenities" class="py-32 px-6 bg-zinc-950">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
+                <div class="glass-card p-14 rounded-[50px] text-center" data-aos="fade-up">
+                    <i class="fas fa-wifi text-5xl text-orange-500 mb-6"></i>
+                    <h5 class="font-black uppercase text-xs tracking-widest">Gigabit Wi-Fi</h5>
+                </div>
+                <div class="glass-card p-14 rounded-[50px] text-center" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-bolt text-5xl text-orange-500 mb-6"></i>
+                    <h5 class="font-black uppercase text-xs tracking-widest">Power Backup</h5>
+                </div>
+                <div class="glass-card p-14 rounded-[50px] text-center" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-tshirt text-5xl text-orange-500 mb-6"></i>
+                    <h5 class="font-black uppercase text-xs tracking-widest">Laundry Pro</h5>
+                </div>
+                <div class="glass-card p-14 rounded-[50px] text-center" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-broom text-5xl text-orange-500 mb-6"></i>
+                    <h5 class="font-black uppercase text-xs tracking-widest">Daily Cleaning</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mess" class="py-32 px-6 bg-black">
+        <div class="max-w-6xl mx-auto glass-card p-16 lg:p-24 rounded-[80px] border-orange-500/20">
+            <h2 class="text-center text-4xl lg:text-6xl font-black font-sync mb-20 uppercase italic">ELITE <span class="text-orange-500">MESS MENU</span></h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-16">
+                <div>
+                    <h5 class="text-orange-500 font-black mb-6 uppercase text-sm">Breakfast</h5>
+                    <p class="text-slate-200 font-bold text-xl mb-2 italic">Aloo Paratha / Poha</p>
+                    <p class="text-[11px] text-slate-500 uppercase font-bold tracking-widest">Fresh & Hot</p>
+                </div>
+                <div>
+                    <h5 class="text-orange-500 font-black mb-6 uppercase text-sm">Lunch</h5>
+                    <p class="text-slate-200 font-bold text-xl mb-2 italic">Special Dal & Veg</p>
+                    <p class="text-[11px] text-slate-500 uppercase font-bold tracking-widest">Home Cooked Style</p>
+                </div>
+                <div>
+                    <h5 class="text-orange-500 font-black mb-6 uppercase text-sm">Evening</h5>
+                    <p class="text-slate-200 font-bold text-xl mb-2 italic">Tea & Snacks</p>
+                    <p class="text-[11px] text-slate-500 uppercase font-bold tracking-widest">Daily Variety</p>
+                </div>
+                <div>
+                    <h5 class="text-orange-500 font-black mb-6 uppercase text-sm">Dinner</h5>
+                    <p class="text-slate-200 font-bold text-xl mb-2 italic">Full Veg Meal</p>
+                    <p class="text-[11px] text-slate-500 uppercase font-bold tracking-widest">Light & Nutritious</p>
+                </div>
+            </div>
+            <div class="mt-20 bg-orange-600/10 border border-orange-500 p-12 rounded-[40px] text-center shadow-2xl">
+                <h3 class="text-3xl font-black italic uppercase mb-2">Sunday Mahabhoj</h3>
+                <p class="text-slate-300 font-bold">Paneer Special, Kheer, and Festive Treats every Sunday!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6">
+        <div class="container mx-auto grid md:grid-cols-2 gap-24">
+            <div data-aos="fade-right">
+                <h2 class="text-5xl font-black font-sync mb-10 uppercase italic">JOIN OUR <span class="text-orange-500">LEGACY.</span></h2>
+                <div class="space-y-8 mb-16">
+                    <p class="flex items-center gap-6 text-xl text-slate-300 font-bold italic"><i class="fas fa-map-marker-alt text-orange-500"></i> Ayodhya Bypass Road, Bhopal</p>
+                    <p class="flex items-center gap-6 text-xl text-slate-300 font-bold italic"><i class="fas fa-phone-alt text-orange-500"></i> +91 9826807264</p>
+                </div>
+                
+                <div class="w-full h-80 rounded-[50px] overflow-hidden glass-card p-3 shadow-2xl">
+                    <iframe src="https://www.bing.com/maps/search?FORM=HDRSC6&q=ayodhya+bypass+road+google+map&cp=23.256970%7E77.477823&lvl=16.2&style=r" width="100%" height="100%" style="border:0; border-radius: 40px; filter: invert(90%);" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            
+            <form class="glass-card p-12 lg:p-16 rounded-[70px] space-y-8" data-aos="fade-left">
+                <h4 class="text-2xl font-black uppercase text-orange-500 italic">Enquiry Form</h4>
+                <div class="space-y-6">
+                    <input type="text" placeholder="Full Name" class="w-full p-6 bg-white/5 border border-white/10 rounded-2xl outline-none focus:border-orange-500 transition font-bold">
+                    <input type="tel" placeholder="Mobile Number" class="w-full p-6 bg-white/5 border border-white/10 rounded-2xl outline-none focus:border-orange-500 transition font-bold">
+                    <select class="w-full p-6 bg-zinc-900 border border-white/10 rounded-2xl outline-none focus:border-orange-500 text-slate-400 font-bold">
+                        <option>Select Branch</option>
+                        <option>Ayodhya Bypass</option>
+                        <option>Indrapuri</option>
+                        <option>MP Nagar</option>
+                    </select>
+                    <textarea rows="4" placeholder="Your Query" class="w-full p-6 bg-white/5 border border-white/10 rounded-2xl outline-none focus:border-orange-500 transition font-bold"></textarea>
+                </div>
+                <button type="submit" class="w-full py-6 cta-button rounded-2xl uppercase tracking-[0.3em] font-black text-sm">Send Application</button>
+            </form>
+        </div>
+    </section>
+    
+    </section>
+    <footer class="py-20 text-center bg-zinc-950 border-t border-white/5">
+        <div class="logo-container h-20 mx-auto mb-10">
+            <img src="Urban-Hostel-Main-Logo-800x600-1.jpg" alt="THE URBAN BOYS HOSTEL Footer Logo" class="mx-auto">
+        </div>
+        <div class="flex justify-center gap-10 mb-10">
+            <a href="https://www.instagram.com/deepak.miishra_999_/" class="text-2xl hover:text-orange-500 transition"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/+919826807264" class="text-2xl hover:text-orange-500 transition"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="text-2xl hover:text-orange-500 transition"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p class="text-[11px] font-black tracking-[1em] text-slate-600 uppercase mb-4">THE URBAN BOYS HOSTELS GROUP BHOPAL</p>
+        <p class="text-[10px] text-slate-800 tracking-widest uppercase font-bold">Designed for High Performance Student Living</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('open');
+        menuBtn.classList.add('active');
+        menuBtn.innerHTML = '<i class="fas fa-times"></i>';  // change to X
+    });
+
+    closeBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        menuBtn.classList.remove('active');
+        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';  // back to hamburger
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            menuBtn.classList.remove('active');
+            menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+    });
+</script>
+    <script>
+        AOS.init({ duration: 1500, once: true });
+    </script>
+</body>
+</html>
