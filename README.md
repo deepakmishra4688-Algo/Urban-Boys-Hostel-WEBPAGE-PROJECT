@@ -1,5 +1,19 @@
 # Urban Boys Hostel Groups Bhopal
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 📋 Project Overview
 
 Urban Boys Hostel Groups Bhopal is a modern, responsive website for a premium luxury boys hostel chain operating in Bhopal, India. The website showcases hostel facilities, amenities, room types, and booking information across three strategic locations.
